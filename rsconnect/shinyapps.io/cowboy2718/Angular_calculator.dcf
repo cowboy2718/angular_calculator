@@ -5,8 +5,8 @@ account: cowboy2718
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2355935
-bundleId: 3189411
+bundleId: 3189451
 url: https://cowboy2718.shinyapps.io/Angular_calculator/
-when: 1590459514.56596
+when: 1590460691.53398
 asMultiple: FALSE
 asStatic: FALSE
