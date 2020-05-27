@@ -27,11 +27,19 @@ The arcminutes and arcseconds in DMS are not the same as the minutes and seconds
 
 ***
 
+#### Algorithm
+
+The algorithm used in this application is based on the haversine formula for determining distances on a "great cirlce."  The haversine formula also reduces floating point errors when two points are very close together.
+
+***
+
 #### References
 
-The following is a useful resource to understand equatorial coordinate system:
+The following is a useful resource to understand equatorial coordinate systems and the application fo the haversine formula for fidning distances:
 
-https://astronomy.swin.edu.au/cosmos/E/Equatorial+Coordinate+System
+https://astronomy.swin.edu.au/cosmos/E/Equatorial+Coordinate+System  
+https://en.wikipedia.org/wiki/Great-circle_distance#Formulas  
+https://en.wikipedia.org/wiki/Haversine_formula
 
 
 
