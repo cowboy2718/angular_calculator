@@ -36,7 +36,7 @@ ui <- fluidPage(
     mainPanel(withMathJax(),
               # Output summary
               h3("Instructions"),
-              p("Input the Right Ascension (RA) and Declination (DEC) for Object 1 and Object 2.  Press Calculate and the angular seperation in degrees will be calculated."),
+              p("Input the Right Ascension (RA) and Declination (DEC) for Object 1 and Object 2.  Press Calculate and the angular seperation in degrees will be displayed."),
               p(""),
               h3("Example"),
               p(""),
