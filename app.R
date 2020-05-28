@@ -53,8 +53,19 @@ ui <- fluidPage(
               p(""),
               p("Object 2 hrs = 1, min = 33, sec = 50.02"),
               p("Object 2 deg = 30, arcmin = 39, arcsec = 36.7"),
+              p(""),
+              p("The estimated angular seperation in degrees is 14.78174"),
+              
               h3("The estimated angular seperation in degrees is:"),
-              verbatimTextOutput("dist",placeholder = TRUE)
+              verbatimTextOutput("dist",placeholder = TRUE),
+              
+             h1(""),
+              
+              h4("Algorithm Notes:"),
+              p("The algorithm used in this application is called the haversine formula, which is good at avoiding floating point errors when the two points are close together, specifically,"),
+              p("$$d=2\\arcsin\\sqrt{\\sin^2\\frac{\\vert\\delta_1-\\delta_2\\vert}{2}+{\\cos\\delta_1\\cos\\delta_2}\\sin^2\\frac{\\vert\\alpha_1-\\alpha_2\\vert}{2}}$$"),
+              p("In which $$\\alpha_1,\\delta_1$$ and $$\\alpha_2,\\delta_2$$"),
+              p("are the Right Ascension and Declination coordinates of Object 1 and Object 2, respectively.")
     )
   )
 )
@@ -95,7 +106,7 @@ angular_dist<-function(ra1_hrs,ra1_min,ra1_sec,dec1_deg,dec1_min,dec1_sec,ra2_hr
     dec_1<-dec1(dec1_deg,dec1_min,dec1_sec)*(pi/180)
     ra_2<-ra2(ra2_hrs,ra2_min,ra2_sec)*(pi/180)
     dec_2<-dec2(dec2_deg,dec2_min,dec2_sec)*(pi/180)
-  #Determine distance
+  #Determine distance based on the haversine formula
     a<-sin(abs(dec_1 - dec_2)/2)**2
     b<-cos(dec_1)*cos(dec_2)*sin(abs(ra_1 - ra_2)/2)**2
     distance<-2*asin(sqrt(a + b))
