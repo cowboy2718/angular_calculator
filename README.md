@@ -29,7 +29,11 @@ The arcminutes and arcseconds in DMS are not the same as the minutes and seconds
 
 #### Algorithm
 
-The algorithm used in this application is based on the haversine formula for determining distances on a "great cirlce."  The haversine formula also reduces floating point errors when two points are very close together.
+The algorithm used in this application is based on the haversine formula for determining distances on a "great cirlce."  The haversine formula also reduces floating point errors when two points are very close together.  Specifically,  
+
+$d=2\arcsin\sqrt{\sin^2\frac{\vert\delta_1-\delta_2\vert}{2}+{\cos\delta_1\cos\delta_2}\sin^2\frac{\vert\alpha_1-\alpha_2\vert}{2}}$  
+
+In which, $\alpha_1,\delta_1$ and $\alpha_2,\delta_2$ are the Right Ascension and Declination coordinates of Object 1 and Object 2, respectively.
 
 ***
 
