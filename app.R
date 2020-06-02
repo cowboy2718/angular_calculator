@@ -57,13 +57,13 @@ ui <- fluidPage(
               p("The estimated angular seperation in degrees is 14.78174"),
               
               h3("The estimated angular seperation in degrees is:"),
-              verbatimTextOutput("dist",placeholder = TRUE),
-#              h4("Algorithm Notes:"),
-#              p("The algorithm used in this application is called the haversine formula, which is good at avoiding floating point errors when the two points are close together, specifically,"),
-#              p("$$d=2\\arcsin\\sqrt{\\sin^2\\frac{\\vert\\delta_1-\\delta_2\\vert}{2}+{\\cos\\delta_1\\cos\\delta_2}\\sin^2\\frac{\\vert\\alpha_1-\\alpha_2\\vert}{2}}$$"),
-#              p("In which $$\\alpha_1,\\delta_1$$ and $$\\alpha_2,\\delta_2$$"),
-#              p("are the Right Ascension and Declination coordinates of Object 1 and Object 2, respectively."),
-              tags$a(href="https://github.com/cowboy2718/angular_calculator", "Click here for more information on the calculator including code on github")
+              verbatimTextOutput("dist",placeholder = TRUE)
+    #           h4("Algorithm Notes:"),
+    #           p("The algorithm used in this application is called the haversine formula, which is good at avoiding floating point errors when the two points are close together, specifically,"),
+    #           p("$$d=2\\arcsin\\sqrt{\\sin^2\\frac{\\vert\\delta_1-\\delta_2\\vert}{2}+{\\cos\\delta_1\\cos\\delta_2}\\sin^2\\frac{\\vert\\alpha_1-\\alpha_2\\vert}{2}}$$"),
+    #           p("In which $$\\alpha_1,\\delta_1$$ and $$\\alpha_2,\\delta_2$$"),
+    #           p("are the Right Ascension and Declination coordinates of Object 1 and Object 2, respectively."),
+ #  #           tags$a(href="https://github.com/cowboy2718/angular_calculator", "Click here for more information on the calculator including code on github")
              
     )
   )
